@@ -4,12 +4,12 @@ TesOS è un piccolo sistema operativo testuale sviluppato in Java che include un
 
 **Funzioni**
 * Sistema di Login a tentativi:
-* Calcolatrice
-* * Cambio username e password
+* Calcolatrice con interfacci agrafica
+* Cambio username e password
+* Cmd interattiva con comandi basici (help, echo, clear)
 
 **Funzioni in sviluppo**
-* Cmd interattiva con comandi basici (help, echo, clear)
-* Calcolatrice avanzata
+* Calcolatrice avanzata con interfaccia grafica
 
 **Come avviarlo**
 * Assicurati di avere Java installato sul tuo computer.
