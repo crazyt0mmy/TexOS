@@ -50,7 +50,7 @@ public class Main {
             s.nextLine();
             
             switch(scelta){
-                case 1 -> Calc.avvia(s);
+                case 1 -> CalcGUI.avvia();
                 case 2 -> CambiaPassword.avvia(s);
                 case 3 -> Cmd.avvia(s);
                 case 9 -> isRunning = false;
