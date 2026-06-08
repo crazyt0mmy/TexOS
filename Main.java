@@ -43,7 +43,8 @@ public class Main {
             System.out.println();
             System.out.println("[1] Calcolatrice");
             System.out.println("[2] Cambia password");
-            System.out.println("[3] Esci");
+            System.out.println("[3] Apri cmd");
+            System.out.println("[9] Esci");
             System.out.print("Selezione: ");
             scelta = s.nextInt();
             s.nextLine();
@@ -51,7 +52,8 @@ public class Main {
             switch(scelta){
                 case 1 -> Calc.avvia(s);
                 case 2 -> CambiaPassword.avvia(s);
-                case 3 -> isRunning = false;
+                case 3 -> Cmd.avvia(s);
+                case 9 -> isRunning = false;
                 default ->
                     System.out.println("Scelta non esistente");
             }
