@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Calc {
     public static void avvia(Scanner s){
+        System.out.println();
         String x;
         String y;
         String opp;
