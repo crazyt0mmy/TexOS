@@ -1,15 +1,28 @@
 import java.util.Scanner;
 import java.io.*;
+import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args){
         Scanner s = new Scanner(System.in);
+        HashMap<String, String> users = new HashMap<>();
         String user;
         String psw;
         int att = 3;
         boolean log = false;
         boolean isRunning = true;
         int scelta = 0;
+
+        try {
+            Scanner reader = new Scanner(new File("credenziali.txt"));
+            while(reader.hasNextLine()){
+                String[] parti = reader.nextLine().split(" ", 2);
+                users.put(parti[0], parti[1]);
+            }
+            reader.close();
+        } catch (Exception ex){
+            System.out.println("Errore!");
+        }
 
         while(!log){
             System.out.print("Nome utente: ");
@@ -18,12 +31,8 @@ public class Main {
             psw = s.nextLine();
 
             try {
-                Scanner reader = new Scanner(new File("credenziali.txt"));
-                String trueUser = reader.nextLine();
-                String truePsw = reader.nextLine();
-                reader.close();
 
-                if(user.equals(trueUser) && psw.equals(truePsw)){
+                if(users.containsKey(user)  && users.get(user).equals(psw)){
                     System.out.println("Accesso effetuato");
                     System.out.print("======== TexOS ========\n");
                     log = true;
